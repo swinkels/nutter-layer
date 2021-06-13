@@ -16,7 +16,7 @@
 - [[#key-bindings][Key bindings]]
 
 * Description
-This layer installs [[https://github.com/swinkels/nutter][nutter]], an Emacs Lisp package to create and seach notes in
+This layer installs [[https://github.com/swinkels/nutter][nutter]], an Emacs Lisp package to create and search notes in
 directories of org-mode files, and configures its keybindings.
 
 # ** Features:
@@ -26,9 +26,21 @@ directories of org-mode files, and configures its keybindings.
 #   - ...
 
 * Install
-To use this configuration layer, add it to your =~/.spacemacs=. You will need to
-add =nutter= to the existing =dotspacemacs-configuration-layers= list in this
-file.
+To use this configuration layer, you have to do two things. First, you add
+=nutter= to the =dotspacemacs-configuration-layers= list in your =~/.spacemacs=.
+Second, you clone the current repo into =~/.emacs.d/private=, which is a
+directory that Spacemacs searches for layers that are not part of Spacemacs
+itself:
+#+begin_example
+$ cd ~/.emacs.d/private
+$ git clone https://github.com/swinkels/nutter-layer nutter
+#+end_example
+
+Note that the name of the directory is =nutter= instead of =nutter-layer=. Why
+not name the current repo =nutter= then? That's because the Emacs Lisp package
+that implements the functionality is already called =nutter=. The layer names in
+=dotspacemacs-configuration-layers= all lack a =-layer= suffix and the layer for
+=nutter= follows that convention.
 
 * Key bindings
 
