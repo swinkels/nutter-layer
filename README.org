@@ -1,0 +1,46 @@
+#+TITLE: nutter layer
+# Document tags are separated with "|" char
+# The example below contains 2 tags: "layer" and "web service"
+# Available tags are listed in <spacemacs_root>/.ci/spacedoc-cfg.edn
+# under ":spacetools.spacedoc.config/valid-tags" section.
+#+TAGS: misc|tool
+
+# The maximum height of the logo should be 200 pixels.
+# [[img/for-readme.png]]
+# - nutter does not have a logo
+
+# TOC links should be GitHub style anchors.
+* Table of Contents                                        :TOC_4_gh:noexport:
+- [[#description][Description]]
+- [[#install][Install]]
+- [[#key-bindings][Key bindings]]
+
+* Description
+This layer installs [[https://github.com/swinkels/nutter][nutter]], an Emacs Lisp package to create and seach notes in
+directories of org-mode files, and configures its keybindings.
+
+# ** Features:
+#   - Autocomplete
+#   - Lint
+#   - Refactor
+#   - ...
+
+* Install
+To use this configuration layer, add it to your =~/.spacemacs=. You will need to
+add =nutter= to the existing =dotspacemacs-configuration-layers= list in this
+file.
+
+* Key bindings
+
+| Key Binding | Description                                                                                     |
+|-------------+-------------------------------------------------------------------------------------------------|
+| ~SPC a n n~ | Create a note in the default nutter directory                                                   |
+| ~SPC a n N~ | Set the default nutter directory for new notes and create a note in that directory              |
+| ~SPC a n r~ | Search the default nutter directories using helm-org-rifle                                      |
+| ~SPC a n R~ | Set the default nutter directories for search and search these directories using helm-org-rifle |
+
+# Use GitHub URLs if you wish to link a Spacemacs documentation file or its heading.
+# Examples:
+# [[https://github.com/syl20bnr/spacemacs/blob/master/doc/VIMUSERS.org#sessions]]
+# [[https://github.com/syl20bnr/spacemacs/blob/master/layers/%2Bfun/emoji/README.org][Link to Emoji layer README.org]]
+# If space-doc-mode is enabled, Spacemacs will open a local copy of the linked file.
